@@ -1,0 +1,9 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+    <form id="form_login" action="" novalidate>
+        {{ form.username }} <span id="username_error"></span> <br> <br>
+        {{ form.password }} <span id="password_error"></span> <br> <br>
+        {{ form.submit_login }} <span id="submit_login_error"></span>
+    </form>
+{% endblock %}

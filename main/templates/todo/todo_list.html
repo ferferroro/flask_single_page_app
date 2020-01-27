@@ -1,0 +1,26 @@
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+
+    {% for message in messages %}
+      <div>{{ message }}</div>
+    {% endfor %}
+
+  {% endif %}
+{% endwith %}
+
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Todo</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.todo }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

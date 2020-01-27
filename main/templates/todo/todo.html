@@ -1,0 +1,13 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+    <form id="form_todo" action="" novalidate>
+        {{ form.todo }} <span id="todo_error"></span> <br> <br>
+        {{ form.submit_todo }} <span id="submit_todo_error"></span>
+    </form>
+
+    <div id="todo_list">
+        {% include './todo/todo_list.html' %}
+    </div>
+    
+{% endblock %}
